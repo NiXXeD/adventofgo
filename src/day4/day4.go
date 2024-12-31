@@ -2,11 +2,11 @@ package day4
 
 import (
 	"adventofgo/src/util"
-	"fmt"
+	"strconv"
 	"strings"
 )
 
-func Day4() {
+func Day4() (string, string) {
 	data := util.LoadFile("./src/day4/day4.txt")
 	lines := strings.Split(data, "\n")
 
@@ -28,8 +28,7 @@ func Day4() {
 		}
 	}
 
-	fmt.Println("Part1:", part1)
-	fmt.Println("Part2:", part2)
+	return strconv.Itoa(part1), strconv.Itoa(part2)
 }
 
 func findXmas(grid [][]string, x int, y int) int {

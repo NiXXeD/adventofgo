@@ -2,14 +2,13 @@ package day1
 
 import (
 	"adventofgo/src/util"
-	"fmt"
 	"math"
 	"sort"
 	"strconv"
 	"strings"
 )
 
-func Day1() {
+func Day1() (string, string) {
 	data := util.LoadFile("./src/day1/day1.txt")
 	lines := strings.Split(data, "\n")
 
@@ -31,8 +30,6 @@ func Day1() {
 		part1 += value
 	}
 
-	fmt.Println("Part1:", part1)
-
 	var part2 int
 	for _, num := range left {
 		count := 0
@@ -44,5 +41,5 @@ func Day1() {
 		part2 += count * num
 	}
 
-	fmt.Println("Part2:", part2)
+	return strconv.Itoa(part1), strconv.Itoa(part2)
 }

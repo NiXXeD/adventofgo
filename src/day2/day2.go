@@ -2,12 +2,11 @@ package day2
 
 import (
 	"adventofgo/src/util"
-	"fmt"
 	"strconv"
 	"strings"
 )
 
-func Day2() {
+func Day2() (string, string) {
 	data := util.LoadFile("./src/day2/day2.txt")
 	reports := strings.Split(data, "\n")
 
@@ -24,8 +23,7 @@ func Day2() {
 		}
 	}
 
-	fmt.Println("Part1:", part1)
-	fmt.Println("Part2:", part2)
+	return strconv.Itoa(part1), strconv.Itoa(part2)
 }
 
 func validateLevelPart1(level []int) bool {

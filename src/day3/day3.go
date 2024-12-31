@@ -2,22 +2,20 @@ package day3
 
 import (
 	"adventofgo/src/util"
-	"fmt"
 	"regexp"
 	"strconv"
 	"strings"
 )
 
-func Day3() {
+func Day3() (string, string) {
 	data := util.LoadFile("./src/day3/day3.txt")
 
 	part1 := process(data)
-	fmt.Println("Part1:", part1)
 
 	cleaned := cleanPart2(string(data))
 	part2 := process(cleaned)
 
-	fmt.Println("Part2:", part2)
+	return strconv.Itoa(part1), strconv.Itoa(part2)
 }
 
 func cleanPart2(data string) string {
