@@ -9,7 +9,7 @@ import (
 
 func Day2() {
 	data := util.LoadFile("./src/day2/day2.txt")
-	reports := strings.Split(string(data), "\n")
+	reports := strings.Split(data, "\n")
 
 	var part1 int
 	var part2 int

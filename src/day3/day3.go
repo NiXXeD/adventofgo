@@ -11,7 +11,7 @@ import (
 func Day3() {
 	data := util.LoadFile("./src/day3/day3.txt")
 
-	part1 := process(string(data))
+	part1 := process(data)
 	fmt.Println("Part1:", part1)
 
 	cleaned := cleanPart2(string(data))

@@ -11,7 +11,7 @@ import (
 
 func Day1() {
 	data := util.LoadFile("./src/day1/day1.txt")
-	lines := strings.Split(string(data), "\n")
+	lines := strings.Split(data, "\n")
 
 	var left, right []int
 	for _, value := range lines {
