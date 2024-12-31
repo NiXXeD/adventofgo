@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func main() {
+func day1() {
 	data, err := os.ReadFile("./day1.txt")
 	check(err)
 
