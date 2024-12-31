@@ -1,3 +1,3 @@
-module adventofcode2
+module adventofgo
 
 go 1.23

@@ -1,16 +1,14 @@
 package day2
 
 import (
+	"adventofgo/src/util"
 	"fmt"
-	"os"
 	"strconv"
 	"strings"
 )
 
 func Day2() {
-	data, err := os.ReadFile("./src/day2/day2.txt")
-	check(err)
-
+	data := util.LoadFile("./src/day2/day2.txt")
 	reports := strings.Split(string(data), "\n")
 
 	var part1 int
@@ -75,10 +73,4 @@ func strArrayToIntArray(strArray []string) []int {
 		result[k], _ = strconv.Atoi(v)
 	}
 	return result
-}
-
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
 }

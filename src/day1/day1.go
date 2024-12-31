@@ -1,27 +1,23 @@
 package day1
 
 import (
+	"adventofgo/src/util"
 	"fmt"
 	"math"
-	"os"
 	"sort"
 	"strconv"
 	"strings"
 )
 
-func day1() {
-	data, err := os.ReadFile("./day1.txt")
-	check(err)
-
+func Day1() {
+	data := util.LoadFile("./src/day1/day1.txt")
 	lines := strings.Split(string(data), "\n")
 
 	var left, right []int
 	for _, value := range lines {
 		values := strings.Split(value, "   ")
-		lval, err := strconv.Atoi(values[0])
-		check(err)
-		rval, err := strconv.Atoi(values[1])
-		check(err)
+		lval, _ := strconv.Atoi(values[0])
+		rval, _ := strconv.Atoi(values[1])
 		left = append(left, lval)
 		right = append(right, rval)
 	}
@@ -49,10 +45,4 @@ func day1() {
 	}
 
 	fmt.Println("Part2:", part2)
-}
-
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
 }

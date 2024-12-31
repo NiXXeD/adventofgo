@@ -1,16 +1,15 @@
 package day3
 
 import (
+	"adventofgo/src/util"
 	"fmt"
-	"os"
 	"regexp"
 	"strconv"
 	"strings"
 )
 
 func Day3() {
-	data, err := os.ReadFile("./src/day3/day3.txt")
-	check(err)
+	data := util.LoadFile("./src/day3/day3.txt")
 
 	part1 := process(string(data))
 	fmt.Println("Part1:", part1)
@@ -51,10 +50,4 @@ func process(input string) int {
 		result += v1 * v2
 	}
 	return result
-}
-
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
 }
