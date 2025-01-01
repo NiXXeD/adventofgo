@@ -5,6 +5,7 @@ import (
 	"adventofgo/src/day2"
 	"adventofgo/src/day3"
 	"adventofgo/src/day4"
+	"adventofgo/src/day5"
 	"fmt"
 	"os"
 )
@@ -25,6 +26,8 @@ func main() {
 		part1, part2 = day3.Day3()
 	case "4":
 		part1, part2 = day4.Day4()
+	case "5":
+		part1, part2 = day5.Day5()
 	}
 
 	fmt.Println("Part1:", part1)
