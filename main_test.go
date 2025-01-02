@@ -6,6 +6,7 @@ import (
 	"adventofgo/src/day3"
 	"adventofgo/src/day4"
 	"adventofgo/src/day5"
+	"adventofgo/src/day6"
 	"testing"
 )
 
@@ -23,6 +24,7 @@ func TestDays(t *testing.T) {
 		{day3.Day3, "3", "178538786", "102467299"},
 		{day4.Day4, "4", "2573", "1850"},
 		{day5.Day5, "5", "4790", "6319"},
+		{day6.Day6, "6", "4696", "0"},
 	}
 
 	for _, test := range tests {
